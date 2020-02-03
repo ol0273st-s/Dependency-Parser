@@ -25,10 +25,9 @@ class JsonParser extends Command
         set_error_handler(function ($severity, $message, $file, $line) {
             throw new \ErrorException($message, $severity, $severity, $file, $line);
         });
-        $dir = getcwd();
         $file = $input->getArgument('file');
         try {
-            $handle = fopen($dir . '/' . $file, 'r');:
+            $handle = fopen( $file, 'r');
         }
         catch (\Exception $e){
             $output->writeln("file not found");
