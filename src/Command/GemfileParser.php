@@ -22,9 +22,10 @@ class GemfileParser extends Command
         set_error_handler(function ($severity, $message, $file, $line) {
             throw new \ErrorException($message, $severity, $severity, $file, $line);
         });
+        $dir = getcwd();
         $my_file = $input->getArgument('file');
         try {
-            $handle = fopen( $my_file, 'r');
+            $handle = fopen($dir . '/' . $my_file, 'r');
         }
         catch(\Exception $e){
             $output->writeln("file not found");
