@@ -1,7 +1,7 @@
 # Read me 
 ## Installation
 Ensure that both php and composer is installed.
-Extract the contents to a desired location.
+Git clone as any normal repository.
 ## Running the tool
 The application can be executed form a CLI by using the command:
 
